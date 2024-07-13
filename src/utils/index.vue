@@ -1,0 +1,8 @@
+<script>
+export const navbarLinks = [
+  { text: 'Home', url: '/' },
+  { text: 'About', url: '/about' },
+  { text: 'Services', url: '/services' },
+  { text: 'Contact', url: '/contact' },
+];
+</script>
