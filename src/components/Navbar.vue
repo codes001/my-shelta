@@ -6,8 +6,7 @@
       <RouterLink to="/">
         <img src="/myshelta.jpeg" class="logo" alt="myShelta" />
       </RouterLink>
-      <!-- <RouterLink to="/">Home</RouterLink>
-    <RouterLink to="/about">About</RouterLink> -->
+    
 
       <ul>
         <li class="flex" v-for="link in navbarLinks" :key="link.text">
