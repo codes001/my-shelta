@@ -15,6 +15,7 @@
       <div class="flex header-mail">
         <img :src="whatsapp" alt="" />
         <a href="#"> +(234) 8061796909 </a>
+        
       </div>
     </div>
   </header>

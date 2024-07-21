@@ -1,4 +1,4 @@
-<script>
+
 export const navbarLinks = [
   { text: 'Home', url: '/' },
   { text: 'About', url: '/about' },
@@ -6,6 +6,3 @@ export const navbarLinks = [
   { text: 'Services', url: '/services' },
   { text: 'Support', url: '/support' },
 ];
-</script>
-
-tem
