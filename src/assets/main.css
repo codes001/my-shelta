@@ -74,14 +74,21 @@ ul {
   height: 100%;
 }
 
+.text-primary{
+  color: var(--primary);
+}
+
+.uppercase{
+  text-transform: uppercase;
+}
 .size-full {
   width: 100%;
   height: 100%;
 }
 
 .container {
-  width: 95%;
-  margin: auto;
+  width: 80%;
+  margin: 0 auto;
 }
 
 /* NAVS */
@@ -103,4 +110,11 @@ header .container {
 .nav {
   background: #fff;
   height: 50px;
+}
+
+
+
+/* RESPONSIVENESS */
+.container{
+  max-width: 95%;
 }

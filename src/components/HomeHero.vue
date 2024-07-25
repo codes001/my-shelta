@@ -1,6 +1,6 @@
 <template>
   <section class="home-hero">
-    <div>
+    <div class="container">
       <div class="home-hero-text flex-col">
         <h2>Property Financing and Management for Every African</h2>
         <p>
@@ -71,23 +71,32 @@
 }
 
 @media (max-width: 500px) {
+  .home-hero {
+    background-image: linear-gradient(
+        rgba(195, 203, 209, 0.75),
+        rgba(225, 227, 244, 0.322)
+      ),
+      url("/src/assets/firsthero.svg");
+  }
+
   .home-hero img {
     display: none;
   }
 
   .home-hero-text {
     width: 100% !important;
-    text-align: justify;
+    /* text-align: ; */
     padding: 0;
   }
 
   .home-hero > div {
     width: 100% !important;
     flex-wrap: wrap;
+    margin-top: 5rem;
   }
 
   .home-hero-text h2 {
-    font-size: 25px;
+    font-size: 30px;
     margin-bottom: 2rem;
   }
 
