@@ -1,7 +1,6 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
-  </div>
+  <Header />
+  <Navbar />
 </template>
 
 <style>
@@ -13,3 +12,8 @@
   }
 }
 </style>
+
+<script setup>
+import Header from "@/components/Header.vue";
+import Navbar from "@/components/Navbar.vue";
+</script>

@@ -1,9 +1,13 @@
 <script setup>
-import HomeHero from "@/components/HomeHero.vue";
+import HomeHero from "../components/HomeHero.vue";
+import Header from "@/components/Header.vue";
+import Navbar from "@/components/Navbar.vue";
 </script>
 
 <template>
   <main>
+    <Header />
+    <Navbar />
     <HomeHero />
   </main>
 </template>
@@ -12,6 +16,5 @@ import HomeHero from "@/components/HomeHero.vue";
 main {
   min-height: 100vh;
   width: 100%;
-  background: red;
 }
 </style>
