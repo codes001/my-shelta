@@ -68,6 +68,9 @@
     width: 400px;
     height: 400px;
   }
+  .home-hero-btn button {
+    font-size: 0.7rem;
+  }
 }
 
 @media (max-width: 500px) {
