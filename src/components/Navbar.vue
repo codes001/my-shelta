@@ -40,7 +40,7 @@ nav .container {
 
       <div class="menu cursor-pointer">
         <svg
-          width="29"
+          width="20"
           height="18"
           viewBox="0 0 29 18"
           fill="none"

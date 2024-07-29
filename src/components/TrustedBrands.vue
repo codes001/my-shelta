@@ -28,19 +28,32 @@ import sie from "@/assets/sie.svg";
   margin-bottom: 2rem;
 }
 .partners {
-  display: grid;
+  display: flex;
   justify-content: center;
   align-items: center;
 
   padding: 2rem 0;
-  width: 30%;
+  width: 70%;
   margin: 0 auto;
-  grid-template-columns: repeat(3, 1fr);
+  flex-wrap: wrap;
 }
 .partners img {
   width: 90px;
   /* aspect-ratio: 1/1; */
   height: 90px;
+  margin: 0 3rem;
+
   object-fit: contain;
+}
+
+@media (max-width: 500px) {
+  .partners {
+    padding: 2rem 0;
+    width: 90%;
+  }
+  .partners img {
+    width: 70px;
+    height: 70px;
+  }
 }
 </style>
