@@ -1,64 +1,87 @@
-
 <style scoped>
-
-nav{
+nav {
   box-shadow: 1px 3px 10px rgba(239, 231, 224, 0.7);
-  padding: .5rem 0;
+  padding: 0.5rem 0;
   height: 70px;
 }
-nav .container{
+nav .container {
   justify-content: space-between;
   align-items: center;
-  
 }
 
-.navbar-ul{
+.navbar-ul {
   gap: 1rem;
   align-items: center;
 }
 
-@media(max-width:768px){
-  .nav .navbar-ul{
+@media (max-width: 768px) {
+  .nav .navbar-ul {
     display: none;
   }
 }
 </style>
 
 <template>
-  <nav class="nav ">
+  <nav class="nav">
     <div class="container flex">
       <RouterLink to="/">
         <img src="/myshelta.jpeg" class="logo" alt="myShelta" />
       </RouterLink>
-    
 
       <ul class="flex navbar-ul">
         <li v-for="link in navbarLinks" :key="link.text">
           <RouterLink :to="link.url">{{ link.text }}</RouterLink>
         </li>
-      
-        <WhiteButton
-        label="Sign Up"
-        type="button"
-      />  
 
-      <Button
-        label="Sign Up"
-        type="button"
-      />    
+        <WhiteButton label="Sign Up" type="button" />
+
+        <Button label="Sign Up" type="button" />
       </ul>
 
-      <!-- <div class="menu">
-        <img src="src/assets/hamburger.svg" alt="">
-      </div> -->
+      <div class="menu cursor-pointer">
+        <svg
+          width="29"
+          height="18"
+          viewBox="0 0 29 18"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M1 8.99911H28"
+            stroke="#FFB100"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M1 0.999107H28"
+            stroke="#FFB100"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M1 16.9991H23"
+            stroke="#FFB100"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M27 16.9991H28"
+            stroke="#FFB100"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </div>
     </div>
   </nav>
 </template>
 
 <script setup>
 import { navbarLinks } from "@/utils";
-import Button from '@/components/Button.vue'
-import WhiteButton from '@/components/WhiteButton.vue'
-// import hamburger from '@/assets/hamburger.svg'
-
+import Button from "@/components/Button.vue";
+import WhiteButton from "@/components/WhiteButton.vue";
 </script>
