@@ -4,6 +4,7 @@ import Header from "@/components/Header.vue";
 import Navbar from "@/components/Navbar.vue";
 import WhiteButton from "@/components/WhiteButton.vue";
 import TrustedBrands from "@/components/TrustedBrands.vue";
+import FansGrid from "@/components/FansGrid.vue";
 import a from "@/assets/pmicon.svg";
 import b from "@/assets/fmicon.svg";
 import c from "@/assets/cicon.svg";
@@ -132,6 +133,8 @@ import smartFrame from "@/assets/smartfram.svg";
         </div>
       </div>
     </section>
+
+    <FansGrid />
   </main>
 </template>
 

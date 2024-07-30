@@ -25,7 +25,9 @@ a {
 img{
   object-fit: cover;
 }
-
+hr{
+  
+}
 ul {
   list-style: none;
 }
