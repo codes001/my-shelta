@@ -1,6 +1,6 @@
 <template>
   <section class="w-full">
-    <div>
+    <div class="fans-grid">
       <h2>Loved by 10,000+ Africans</h2>
 
       <hr style="width: 100px; text-align: center" />
@@ -25,7 +25,10 @@
     </div>
   </section>
 </template>
-<style scoped></style>
+<style scoped>
+.fans-grid {
+}
+</style>
 
 <script setup>
 import Button from "./Button.vue";
