@@ -14,9 +14,17 @@ nav .container {
   align-items: center;
 }
 
+.menu {
+  display: none;
+}
+
 @media (max-width: 768px) {
   .nav .navbar-ul {
     display: none;
+  }
+
+  .menu {
+    display: block;
   }
 }
 </style>
