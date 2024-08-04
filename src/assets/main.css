@@ -39,7 +39,7 @@ h1{
   font-size: 30px;
 }
 
-/* UTILITIES */
+/* UTILITIY CLASSES */
 .btn {
   background-color: var(--primary);
   color: #fff;
