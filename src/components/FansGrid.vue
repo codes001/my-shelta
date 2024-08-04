@@ -1,16 +1,16 @@
 <template>
   <section class="w-full">
     <div class="container fans-grid">
-      <div class="grid-item grid-item-1">
-        <h2>Loved by 10,000+ Africans</h2>
-
-        <hr style="width: 100px; text-align: center" />
-
-        <Button label="Create a free account" type="button" />
-      </div>
-
       <div class="fans-grid-main">
-        <img class="grid-item" :src="a" alt="a" />
+        <div class="grid-item flex-col grid-item-1 text-center">
+          <h2 class="text-center">Loved by 10,000+ Africans</h2>
+
+          <hr style="width: 100px; text-align: center" />
+
+          <Button label="Create a free account" type="button" />
+        </div>
+
+        <img class="" :src="a" alt="a" />
         <img :src="b" alt="b" />
         <img :src="c" alt="c" />
         <img :src="d" alt="d" />
@@ -23,35 +23,83 @@
         <img :src="k" alt="k" />
         <img :src="l" alt="l" />
         <img :src="m" alt="m" />
+        <img :src="l" alt="l" />
+        <img :src="m" alt="m" />
       </div>
     </div>
   </section>
 </template>
 <style scoped>
 .fans-grid {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr); /* 6 columns */
-  grid-template-rows: repeat(4, 1fr); /* 4 rows */
-  gap: 10px; /* Add some space between grid items */
-  width: 100%;
-  height: 100vh; /* Full height for demonstration */
+  gap: 0;
 }
-/* 
-.grid-item {
-  background-color: lightblue;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid #ccc;
-  font-size: 20px;
-} */
+
+.fans-grid img {
+  width: 200px;
+  height: 200px;
+}
+.fans-grid-main {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 10px;
+  width: 100%;
+  overflow-x: hidden;
+  height: 100vh;
+}
 
 .grid-item-1 {
   background: #000a2f;
-  /* width: 100%;
-  height: 100%; */
-  grid-column: 1 / span 3; /* Start at column 1 and span 3 columns */
-  grid-row: 1 / span 3;
+  border-radius: 10px;
+  grid-column: span 3;
+  grid-row: span 2;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  gap: 1rem;
+}
+
+.grid-item-1 h2 {
+  font-size: 2rem;
+}
+
+@media (max-width: 1100px) {
+  .fans-grid-main {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .fans-grid img {
+    width: 150px;
+    height: 150px;
+  }
+  .fans-grid-main {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .fans-grid img {
+    display: none;
+  }
+
+  .grid-item-1 {
+    background: #000a2f;
+    width: 100% !important;
+    /* grid-column: 1fr;
+    grid-row: 1fr; */
+    height: 400px;
+    color: #fff;
+    gap: 1rem;
+  }
+
+  .fans-grid-main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    width: 100%;
+  }
 }
 </style>
 
