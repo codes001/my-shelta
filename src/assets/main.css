@@ -15,6 +15,7 @@
 body {
   font-size: 14px;
   line-height: 30px;
+  overflow-x: hidden;
 }
 /* GENERAL STYLES */
 a {
@@ -32,10 +33,10 @@ ul {
 
 h1,h1,h3,h4,h5{
   margin-bottom: 1rem;
+  color: #000a2f;
 }
 
 h1{
-  color: #000a2f;
   font-size: 30px;
 }
 
@@ -142,7 +143,7 @@ header .container {
   }
 
   h1{
-    color: #000a2f;
+   
     font-size: 22px !important;
   }
 }

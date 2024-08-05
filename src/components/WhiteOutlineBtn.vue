@@ -10,11 +10,11 @@ button {
   font-size: 18px;
   border: none;
   border-radius: 5px;
-  color: var(--primary);
+  color: var(--secondary);
   font-weight: 600;
   cursor: pointer;
-  border: 2px solid var(--primary);
-  background: #fff;
+  border: 2px solid var(--secondary);
+  background: transparent;
 }
 
 button[disabled] {

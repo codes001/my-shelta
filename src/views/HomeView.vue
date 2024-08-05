@@ -6,6 +6,9 @@ import WhiteButton from "@/components/WhiteButton.vue";
 import TrustedBrands from "@/components/TrustedBrands.vue";
 import Footer from "@/components/Footer.vue";
 import FansGrid from "@/components/FansGrid.vue";
+import Card from "@/components/Card.vue";
+import ClientsReview from "@/components/ClientsReview.vue";
+import WhiteOutlineBtn from "@/components/WhiteOutlineBtn.vue";
 import a from "@/assets/pmicon.svg";
 import b from "@/assets/fmicon.svg";
 import c from "@/assets/cicon.svg";
@@ -137,6 +140,49 @@ import smartFrame from "@/assets/smartfram.svg";
 
     <FansGrid />
 
+    <!--  PEOPLE WE SERVE -->
+
+    <section class="w-full flex">
+      <div class="container peopleWeServe">
+        <div>
+          <Card
+            figure="500"
+            people="Landlords"
+            subtext="Get your complete rent without delay or stress."
+          />
+        </div>
+
+        <div>
+          <Card
+            figure="3,000"
+            people="Tenants"
+            subtext="We pay your rent so you enjoy sustainable living."
+          />
+        </div>
+
+        <div>
+          <Card
+            figure="30"
+            people="Organizations"
+            subtext="Onboard your staff and enjoy more benefit."
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- CLIENT/LANDLORD REVIEW -->
+    <ClientsReview />
+
+    <!-- Hero section -->
+    <section class="container homeHeroTwo">
+      <p>Ready to get started</p>
+
+      <div class="flex homeHeroTwoBtn">
+        <WhiteButton label="Contact Sales" />
+
+        <WhiteOutlineBtn label="Create a free account" />
+      </div>
+    </section>
     <Footer />
   </main>
 </template>
@@ -171,6 +217,28 @@ main {
   padding: 2rem 0;
   margin: 2rem 0;
   color: #333;
+}
+
+/*  SECOND HERO SECTION*/
+.homeHeroTwo {
+  background: #0033ea;
+  height: 400px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.homeHeroTwo p {
+  font-size: 5rem;
+  font-weight: bold;
+  color: white;
+}
+
+.homeHeroTwo .homeHeroTwoBtn {
+  gap: 2rem;
 }
 
 /* PROPERTY MANAGEMENT */
@@ -227,6 +295,14 @@ main {
   background: #ccfbd9;
 }
 
+/* PEOPLE WE SERVE */
+.peopleWeServe {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  justify-content: center !important;
+  align-items: center;
+}
 /* SMART */
 .smart .container {
   display: grid;
@@ -244,7 +320,7 @@ main {
   height: 100%;
 }
 /* MEDIA QUERIES */
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .props-finance-container {
     flex-direction: column;
     width: 100%;
@@ -256,6 +332,7 @@ main {
     /* padding: 0 10px; */
   }
   .sub-financing {
+    display: flex;
     flex-direction: column;
     padding: 2rem 0;
     gap: 1rem;
@@ -263,11 +340,10 @@ main {
     align-items: start;
   }
   .props-management,
-  .props-management .props-child-two {
+  .props-management-one {
     width: 100%;
 
     grid-template-columns: 1fr;
-    /* gap: 4rem; */
   }
 
   .props-management .props-management-one p {
@@ -284,6 +360,13 @@ main {
   .props-child-two {
     width: 100% !important;
     text-align: left;
+    display: flex !important;
+
+    flex-direction: column !important;
+    justify-content: center;
+    align-items: center;
+    /* text-align: center; */
+    gap: 2rem;
   }
   .props-child-two div {
     width: 100% !important;
@@ -310,6 +393,13 @@ main {
   }
 }
 
+@media (max-width: 900px) {
+  .peopleWeServe {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 768px) {
   .smart .container {
     display: grid;
@@ -327,6 +417,23 @@ main {
     width: 100% !important;
     height: 100%;
     object-fit: contain;
+  }
+
+  /*  SECOND HERO SECTION*/
+
+  .homeHeroTwo p {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .peopleWeServe {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    width: 100%;
+  }
+  .homeHeroTwo p {
+    font-size: 2rem;
   }
 }
 </style>

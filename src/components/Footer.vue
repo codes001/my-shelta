@@ -77,19 +77,17 @@
 footer {
   margin: 4rem 0;
   padding: 2rem 0;
-  position: relative;
 }
 .grid-container {
   width: 100%;
   display: grid;
   gap: 2rem;
-  transform: translateX(-40%);
-  position: absolute;
-  top: -150px;
-  left: 50%;
-  grid-template-columns: repeat(5, 1fr);
-  /* justify-content: center;
-  align-items: center; */
+
+  font-size: 1.3rem;
+  line-height: 40px;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  /* align-items: center; */
 }
 
 .grid-span-two {
@@ -108,7 +106,7 @@ footer {
 }
 
 .copyright p {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
 }
 
 .copyright span {
@@ -121,6 +119,21 @@ footer {
 .copyright img {
   color: var(--secondary);
   filter: invert(1);
+}
+
+@media (max-width: 800px) {
+  .grid-container {
+    gap: 3rem;
+    justify-content: space-between;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
 }
 </style>
 

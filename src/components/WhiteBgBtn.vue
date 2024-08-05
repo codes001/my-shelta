@@ -7,14 +7,14 @@
 <style scoped>
 button {
   padding: 10px 12px;
-  font-size: 18px;
+  font-size: 16px;
   border: none;
   border-radius: 5px;
   color: var(--primary);
   font-weight: 600;
   cursor: pointer;
-  border: 2px solid var(--primary);
-  background: #fff;
+  background: var(--secondary);
+  /* font-size: 16px; */
 }
 
 button[disabled] {
