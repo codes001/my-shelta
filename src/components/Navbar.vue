@@ -96,6 +96,7 @@ import Button from "@/components/Button.vue";
 import WhiteButton from "@/components/WhiteButton.vue";
 import { ref } from "vue";
 
+//INITIALIZE
 const isOpen = ref(false);
 
 const toggleMenu = () => {
