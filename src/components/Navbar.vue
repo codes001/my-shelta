@@ -36,7 +36,7 @@ nav .container {
         <img src="/myshelta.jpeg" class="logo" alt="myShelta" />
       </RouterLink>
 
-      <ul class="flex navbar-ul">
+      <ul class="flex navbar-ul" :class="{ 'is-open': isOpen }">
         <li v-for="link in navbarLinks" :key="link.text">
           <RouterLink :to="link.url">{{ link.text }}</RouterLink>
         </li>
@@ -48,6 +48,8 @@ nav .container {
 
       <div class="menu cursor-pointer">
         <svg
+          class="hamburger-icon"
+          :class="{ 'is-active': isOpen }"
           width="20"
           height="18"
           viewBox="0 0 29 18"
@@ -92,4 +94,16 @@ nav .container {
 import { navbarLinks } from "@/utils";
 import Button from "@/components/Button.vue";
 import WhiteButton from "@/components/WhiteButton.vue";
+import { ref } from "vue";
+
+const isOpen = ref(false);
+
+const toggleMenu = () => {
+  isOpen.value = !isOpen.value;
+};
+
+return {
+  isOpen,
+  toggleMenu,
+};
 </script>
