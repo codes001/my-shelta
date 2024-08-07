@@ -17,6 +17,31 @@ nav .container {
 .menu {
   display: none;
 }
+/*  */
+
+/* Mobile Menu Styling */
+.mobile-menu {
+  transition: all 1s ease-in-out;
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 80px;
+  right: 0;
+  background-color: var(--secondary);
+  width: 100%;
+  text-align: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mobile-menu.nav-active {
+  display: flex;
+}
+
+.mobile-menu li {
+  padding: 1rem 0;
+}
 
 @media (max-width: 768px) {
   .nav .navbar-ul {
@@ -25,6 +50,12 @@ nav .container {
 
   .menu {
     display: block;
+  }
+}
+
+@media (min-width: 769px) {
+  .mobile-menu {
+    display: none;
   }
 }
 </style>
@@ -36,7 +67,7 @@ nav .container {
         <img src="/myshelta.jpeg" class="logo" alt="myShelta" />
       </RouterLink>
 
-      <ul class="flex navbar-ul" :class="{ 'is-open': isOpen }">
+      <ul class="flex navbar-ul">
         <li v-for="link in navbarLinks" :key="link.text">
           <RouterLink :to="link.url">{{ link.text }}</RouterLink>
         </li>
@@ -48,8 +79,8 @@ nav .container {
 
       <div class="menu cursor-pointer">
         <svg
-          class="hamburger-icon"
-          :class="{ 'is-active': isOpen }"
+          class="menu-icon"
+          @click="toggleMenu"
           width="20"
           height="18"
           viewBox="0 0 29 18"
@@ -86,6 +117,13 @@ nav .container {
           />
         </svg>
       </div>
+
+      <!-- Mobile Menu -->
+      <ul :class="{ 'mobile-menu': true, 'nav-active': isMenuOpen }">
+        <li v-for="link in navbarLinks" :key="link.text">
+          <RouterLink :to="link.url">{{ link.text }}</RouterLink>
+        </li>
+      </ul>
     </div>
   </nav>
 </template>
@@ -96,15 +134,11 @@ import Button from "@/components/Button.vue";
 import WhiteButton from "@/components/WhiteButton.vue";
 import { ref } from "vue";
 
+const isMenuOpen = ref(false);
+
+function toggleMenu() {
+  isMenuOpen.value = !isMenuOpen.value;
+}
+
 //INITIALIZE
-const isOpen = ref(false);
-
-const toggleMenu = () => {
-  isOpen.value = !isOpen.value;
-};
-
-return {
-  isOpen,
-  toggleMenu,
-};
 </script>
