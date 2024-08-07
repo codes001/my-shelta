@@ -83,7 +83,7 @@ footer {
   display: grid;
   gap: 2rem;
 
-  font-size: 1.3rem;
+  font-size: 1rem;
   line-height: 40px;
   grid-template-columns: repeat(4, 1fr);
   justify-content: center;
@@ -106,7 +106,7 @@ footer {
 }
 
 .copyright p {
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .copyright span {
@@ -133,6 +133,11 @@ footer {
   .grid-container {
     grid-template-columns: 1fr;
     width: 100%;
+  }
+
+  .copyright .container {
+    flex-direction: column;
+    gap: 2rem;
   }
 }
 </style>
