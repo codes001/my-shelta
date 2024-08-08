@@ -182,5 +182,9 @@ function goToSlide(index) {
     margin-top: 3rem;
     z-index: 2;
   }
+
+  .review-content {
+    padding: 0;
+  }
 }
 </style>

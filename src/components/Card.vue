@@ -27,7 +27,7 @@
 }
 
 .card h1 {
-  font-size: 3rem;
+  font-size: 4rem;
   opacity: 0.2;
   font-weight: bolder;
 }
@@ -52,6 +52,10 @@
 @media (max-width: 600px) {
   .card {
     width: 100%;
+  }
+
+  .card h1 {
+    font-size: 6rem;
   }
 }
 </style>

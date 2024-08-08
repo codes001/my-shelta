@@ -92,6 +92,7 @@
     height: 400px;
     color: #fff;
     gap: 1rem;
+    overflow: hidden;
   }
 
   .fans-grid-main {
