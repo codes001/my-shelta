@@ -72,9 +72,13 @@ nav .container {
           <RouterLink :to="link.url">{{ link.text }}</RouterLink>
         </li>
 
-        <WhiteButton label="Sign Up" type="button" />
+        <RouterLink to="/login">
+          <WhiteButton label="Login" type="button" />
+        </RouterLink>
 
-        <Button label="Sign Up" type="button" />
+        <RouterLink to="/signup">
+          <Button label="Sign Up" type="button" />
+        </RouterLink>
       </ul>
 
       <div class="menu cursor-pointer">

@@ -40,6 +40,15 @@ h1{
   font-size: 30px;
 }
 
+input {
+  padding: 0.65rem;
+  border: 1px solid #ccc;
+}
+
+input:focus {
+  outline: none;
+}
+
 /* UTILITIY CLASSES */
 .btn {
   background-color: var(--primary);
