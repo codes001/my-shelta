@@ -391,6 +391,10 @@ main {
     width: 100% !important;
     height: 100%;
   }
+
+  .homeHeroTwo .homeHeroTwoBtn {
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 900px) {
@@ -434,6 +438,10 @@ main {
   }
   .homeHeroTwo p {
     font-size: 2rem;
+  }
+
+  .homeHeroTwo {
+    width: 95%;
   }
 }
 </style>

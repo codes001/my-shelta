@@ -101,6 +101,17 @@
     width: 100%;
   }
 }
+
+@media (max-width: 600px) {
+  .grid-item-1 h2 {
+    font-size: 1.5rem;
+  }
+
+  .fans-grid-main {
+    height: 50vh;
+    margin-bottom: 2rem;
+  }
+}
 </style>
 
 <script setup>

@@ -116,7 +116,7 @@ function goToSlide(index) {
 }
 
 .review-text {
-  font-size: 1.5rem;
+  font-size: 1rem;
   margin: 0;
   text-align: justify;
 }
@@ -140,7 +140,7 @@ function goToSlide(index) {
 }
 
 .navigation button {
-  background: var(--primary);
+  background: #0033ea;
   border: none;
   color: white;
   padding: 10px;
@@ -164,6 +164,7 @@ function goToSlide(index) {
   }
   .review-text {
     text-align: center;
+    font-size: 1.5rem;
   }
 }
 
